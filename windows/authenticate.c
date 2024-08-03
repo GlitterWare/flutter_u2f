@@ -31,7 +31,7 @@ int ValidateFIDO2Tokens(DWORD clientDataLength,
       timeout,
       {keyHandlesCount, credentials},  // CredentialList
       {0, NULL},                       // Extensions
-      WEBAUTHN_AUTHENTICATOR_ATTACHMENT_CROSS_PLATFORM_U2F_V2,
+      WEBAUTHN_AUTHENTICATOR_ATTACHMENT_ANY,
       WEBAUTHN_USER_VERIFICATION_REQUIREMENT_DISCOURAGED,
       0,  // dwFlags
       NULL,

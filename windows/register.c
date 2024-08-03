@@ -14,8 +14,8 @@ int RegisterFIDO2Token(DWORD clientDataLength,
   WEBAUTHN_RP_ENTITY_INFORMATION rPInformation = {
       WEBAUTHN_RP_ENTITY_INFORMATION_CURRENT_VERSION,  // Structure version
       appId,
-      L"U2F",
-      NULL,
+      L"GlitterWare",
+      L"https://glitterware.github.io/assets/images/logo.png",
   };
 
   WEBAUTHN_USER_ENTITY_INFORMATION userInformation = {
@@ -60,7 +60,7 @@ int RegisterFIDO2Token(DWORD clientDataLength,
           timeout,
           {0, NULL},  // excludedCred
           {0, NULL},  // Extensions
-          WEBAUTHN_AUTHENTICATOR_ATTACHMENT_CROSS_PLATFORM_U2F_V2,
+          WEBAUTHN_AUTHENTICATOR_ATTACHMENT_ANY,
           FALSE,
           WEBAUTHN_USER_VERIFICATION_REQUIREMENT_DISCOURAGED,
           WEBAUTHN_ATTESTATION_CONVEYANCE_PREFERENCE_DIRECT,
